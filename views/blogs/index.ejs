@@ -1,0 +1,62 @@
+<html lang = "en">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <div class="out-template-1"></div>
+        <div class="out-template-2"></div>
+        <div class="out-template-1"></div>
+        <div class = "Cardview card">
+        <%- include('../partials/nav.ejs') %>
+        <%- include('../partials/slider.ejs') %>
+        <div class = "blogs content">
+            <h2 style = "text-align: center; font-family: 'Dancing Script', cursive;">All blogs</h2>
+            <% if (blogs.length > 0) {%>
+                <% blogs.forEach(blog => {%>
+                    <a class = "single" href = "/blogs/<%- blog._id%>">
+
+                        <h3 class = 'title'><%=blog.title%></h3>
+                        <p class = 'snippet'><%=blog.snippet%></p>
+
+                    </a>
+                <%})%>
+                <% } else {%>
+                    <p>There are no blogs to display</p>
+                 <% } %>   
+        </div>
+        <br/>
+        <span class = "headlines-style">Todays Headlines articles</span>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div class="stylish-container">
+            <div class="stylish-box">
+                <img src="https://i.pinimg.com/564x/c2/39/18/c2391865607de5892cc3f3a70d6f0b3f.jpg" alt="image" height = "300px" width = "300px";>
+            </div>
+            <span class="catergory-news"> Sports News</span>
+            <div class="grid-descrip">
+                <span class = "Cat-title">Fact Check: ‘Messi's Magic' Gave PSG's Insta A Boost</span>
+                <span class="Cat-descrip">
+                    <p>The legendary Argentinian footballer, Lionel Messi recently ended his 21-year association with the Spanish football club, Barcelona and joined France's Paris Saint-Germain.</p>
+                    <button type="button" class="btn btn-outline-danger">Read More</button>
+                </span>
+            </div>
+        </div>
+        <br/><br/><br/><br/>
+        <div class="stylish-container">
+            <div class="stylish-box">
+                <img src="https://i.pinimg.com/564x/75/06/37/7506378c63a5a8bd940588e959dedafa.jpg" alt="image" height = "300px" width = "300px";>
+            </div>
+            <span class="catergory-news"> Tech News</span>
+            <div class="grid-descrip">
+                <span class = "Cat-title">Fact Check: ‘Messi's Magic' Gave PSG's Insta A Boost</span>
+                <span class="Cat-descrip">
+                    <p>The legendary Argentinian footballer, Lionel Messi recently ended his 21-year association with the Spanish football club, Barcelona and joined France's Paris Saint-Germain.</p>
+                    <button type="button" class="btn btn-outline-danger">Read More</button>
+                </span>
+            </div>
+            
+        </div>
+        <%- include('../partials/footer.ejs') %>
+    </div>
+    </body>
+</html>
