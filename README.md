@@ -2,8 +2,6 @@
 
 <!-- <h2>This is Blog app where we can Create, Read and Delete the operation.</h2> -->
 ![](Image/frontpage.png)
-
-<br>
 ![](Image/formpage.png)
 
 
